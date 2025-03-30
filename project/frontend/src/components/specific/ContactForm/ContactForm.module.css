@@ -1,0 +1,77 @@
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Increased spacing between form elements */
+    padding: 3rem; /* Increased padding for a more spacious feel */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f4f7fa; /* Lighter background color for better contrast */
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem; /* Increased gap for better spacing */
+}
+
+.formGroup label {
+    font-weight: 600;
+    color: #20232a; /* Dark blue text for labels */
+    font-size: 1.1rem; /* Slightly larger font for labels */
+}
+
+.formGroup input,
+.formGroup textarea {
+    padding: 1rem; /* Increased padding for input fields */
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color: #fff; /* White background for input fields */
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    border-color: #61dafb; /* React's blue color for focus */
+    box-shadow: 0 0 5px rgba(97, 218, 251, 0.5); /* Slight glow effect */
+}
+
+.submitButton {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #61dafb; /* React blue */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+    background-color: #21a1f1; /* Darker blue for hover effect */
+}
+
+.error {
+    color: #d9534f;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.successMessage {
+    text-align: center;
+    color: #4CAF50;
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    background-color: #e8f5e9;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    margin: 1rem auto;
+    max-width: 600px;
+}

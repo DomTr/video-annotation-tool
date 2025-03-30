@@ -1,0 +1,102 @@
+/* src/components/common/Header.module.css */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #282c34;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.logo a {
+    color: #61dafb;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+}
+
+.navList {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.navList li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+}
+
+.navList li a:hover {
+    color: #61dafb;
+}
+
+.active {
+    color: #61dafb;
+    font-weight: bold;
+    border-bottom: 2px solid #61dafb;
+}
+
+/* Mobile Menu Button */
+.mobileMenuButton {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .nav {
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        width: 100%;
+        background-color: #282c34;
+        flex-direction: column;
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .nav.open {
+        max-height: 300px; /* Adjust as needed */
+    }
+
+    .navList {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .navList li a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .mobileMenuButton {
+        display: flex;
+    }
+}

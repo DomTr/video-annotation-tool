@@ -1,0 +1,96 @@
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.formGroup label {
+    margin-bottom: 6px;
+    font-size: 1.1em;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.formGroup input,
+.formGroup textarea {
+    padding: 12px 15px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f8f8f8;
+    font-family: inherit;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+    outline: none;
+}
+
+.submitButton {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submitButton:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.submitButton:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+.successMessage,
+.errorMessage {
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.successMessage {
+    color: #27ae60;
+}
+
+.errorMessage {
+    color: #e74c3c;
+}
+
+@media (max-width: 600px) {
+    .contactForm {
+        padding: 20px;
+    }
+
+    .formGroup label {
+        font-size: 1em;
+    }
+
+    .submitButton {
+        font-size: 1em;
+    }
+}
